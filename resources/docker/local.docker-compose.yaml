@@ -27,7 +27,7 @@ volumes:
 services:
   api:
     build:
-      dockerfile: "./resources/docker/api.dockerfile"
+      dockerfile: "./resources/docker/local.api.dockerfile"
       context: *ROOT_DIRECTORY
     environment: *ENV
     volumes: *DEVELOPMENT_VOLUMES

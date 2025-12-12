@@ -5,9 +5,17 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "alembic>=1.17.2",
-    "fastapi>=0.124.2",
+]
+
+[dependency-groups]
+linters = [
     "pyright>=1.1.407",
     "ruff>=0.14.9",
+]
+local = [
     "uvicorn>=0.38.0",
+]
+app = [
+    "alembic>=1.17.2",
+    "fastapi>=0.124.2",
 ]

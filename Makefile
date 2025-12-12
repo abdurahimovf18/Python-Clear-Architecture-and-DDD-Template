@@ -33,7 +33,7 @@ lint-fix-unsafe:
 	uv run ruff check . --fix --unsafe-fixes
 
 # Dependency Commands
-sync-deps:
+sync:
 	uv sync --all-groups
 
 lock:

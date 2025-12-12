@@ -327,22 +327,32 @@ wheels = [
 name = "python-clear-architecture-and-ddd-template"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
+
+[package.dev-dependencies]
+app = [
     { name = "alembic" },
     { name = "fastapi" },
+]
+linters = [
     { name = "pyright" },
     { name = "ruff" },
+]
+local = [
     { name = "uvicorn" },
 ]
 
 [package.metadata]
-requires-dist = [
+
+[package.metadata.requires-dev]
+app = [
     { name = "alembic", specifier = ">=1.17.2" },
     { name = "fastapi", specifier = ">=0.124.2" },
+]
+linters = [
     { name = "pyright", specifier = ">=1.1.407" },
     { name = "ruff", specifier = ">=0.14.9" },
-    { name = "uvicorn", specifier = ">=0.38.0" },
 ]
+local = [{ name = "uvicorn", specifier = ">=0.38.0" }]
 
 [[package]]
 name = "ruff"

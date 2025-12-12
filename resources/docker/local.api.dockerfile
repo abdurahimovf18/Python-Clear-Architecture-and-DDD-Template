@@ -6,6 +6,10 @@ COPY uv.lock pyproject.toml ./
 
 RUN pip install uv --no-cache-dir
 
+RUN uv venv
+
+RUN uv sync --group app --group local
+
 COPY . .
 
 EXPOSE 8000
