@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir uv \
     && uv venv \
     && uv sync --group app --group local
 
-ENTRYPOINT ["sh", "sleep infinite"]
+ENTRYPOINT ["sh", "sleep infinity"]
