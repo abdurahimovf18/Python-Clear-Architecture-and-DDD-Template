@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  push-images:
+    needs: [lints, tests, type-checks]
+    name: Build and Push Images
+    runs-on: ubuntu-latest
+    steps:
+       - name: Echo Implementation
+         run: | 
+          echo "TODO: Push Images to Habor or DockerHUB later."
+
+  type-checks:
+    name: Type Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - id: "setup_docker_compose"
+        name: "Setup Docker Compose"
+        uses: ./.github/actions/docker-setup
+
+      - name: Run Tests
+        run: make ci-type-check
+
+  lints:
+    name: Linters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - id: "setup_docker_compose"
+        name: "Setup Docker Compose"
+        uses: ./.github/actions/docker-setup
+
+      - name: Run Linters
+        run: make ci-lint
+    
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - id: "setup_docker_compose"
+        name: "Setup Docker Compose"
+        uses: ./.github/actions/docker-setup
+
+      - name: Run Tests
+        run: make ci-test

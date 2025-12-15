@@ -72,3 +72,7 @@ shell-db:
 # Tree Command
 tree:
 	tree > tree.txt
+
+# Ci Commands
+ci-build:
+	
