@@ -2,12 +2,20 @@ FROM python:3.12-slim
 
 WORKDIR /app
 
-COPY uv.lock pyproject.toml ./
+COPY uv.lock pyproject.toml .python-version ./
 
-RUN pip install --no-cache-dir uv \
-    && uv venv \
-    && uv sync --group linters
+RUN pip install --no-cache-dir uv 
+
+RUN uv sync --group app --group tests --group linters
 
 COPY . .
 
-CMD ["tail", "-f", "/dev/null"]
+# ---- application code ----
+COPY --chown=app:app . .
+
+# ---- runtime ----
+USER app
+
+EXPOSE 8000
+
+ENTRYPOINT ["uv", "run", "uvicorn", "src.main:app", "--reload", "--host", "0.0.0.0", "--port", "8000"]
