@@ -27,7 +27,7 @@ jobs:
           POSTGRES_PASSWORD: database
 
       broker:
-        image: rabbitmq:4.1.6-management
+        image: rabbitmq:4.2.2
         env:
           RABBITMQ_DEFAULT_USER: guest
           RABBITMQ_DEFAULT_PASS: guest
