@@ -1,3 +1,10 @@
 {"asctime": "2025-12-30T15:31:19Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Started server process [163]", "filename": "server.py", "lineno": 84, "color_message": "Started server process [\u001b[36m%d\u001b[0m]"}
 {"asctime": "2025-12-30T15:31:19Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Waiting for application startup.", "filename": "on.py", "lineno": 48}
 {"asctime": "2025-12-30T15:31:20Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Application startup complete.", "filename": "on.py", "lineno": 62}
+{"asctime": "2025-12-30T15:42:21Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Shutting down", "filename": "server.py", "lineno": 264}
+{"asctime": "2025-12-30T15:42:21Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Waiting for application shutdown.", "filename": "on.py", "lineno": 67}
+{"asctime": "2025-12-30T15:42:21Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Application shutdown complete.", "filename": "on.py", "lineno": 76}
+{"asctime": "2025-12-30T15:42:21Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Finished server process [163]", "filename": "server.py", "lineno": 94, "color_message": "Finished server process [\u001b[36m%d\u001b[0m]"}
+{"asctime": "2025-12-30T15:42:24Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Started server process [565]", "filename": "server.py", "lineno": 84, "color_message": "Started server process [\u001b[36m%d\u001b[0m]"}
+{"asctime": "2025-12-30T15:42:24Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Waiting for application startup.", "filename": "on.py", "lineno": 48}
+{"asctime": "2025-12-30T15:42:24Z", "levelname": "INFO", "name": "uvicorn.error", "message": "Application startup complete.", "filename": "on.py", "lineno": 62}

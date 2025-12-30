@@ -1,10 +1,10 @@
+import sys
 from datetime import UTC
 from pathlib import Path
-import sys
 from typing import Literal
-from pythonjsonlogger import jsonlogger
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from pythonjsonlogger import jsonlogger
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 

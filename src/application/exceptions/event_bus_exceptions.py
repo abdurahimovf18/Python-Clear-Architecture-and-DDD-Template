@@ -1,7 +1,4 @@
-from src.shared.exceptions import (
-    ApplicationException,
-    InternalError
-)
+from src.shared.exceptions import ApplicationException, InternalError
 
 
 class EventBusException(ApplicationException):
